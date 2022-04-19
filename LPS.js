@@ -12,8 +12,8 @@
 function LPS(s){
 	if(s == null || s.length < 1) return "";
 
-	int start = 0;
-	int end = 0;
+	let start = 0;
+	let end = 0;
 
 	 for(let i=0; i < s.length; i++){
 
