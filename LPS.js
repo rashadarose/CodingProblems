@@ -19,7 +19,7 @@ function LPS(s){
 
 	 	let len1 = expandFromCenter(s, i, i);
 	 	let len2 = expandFromCenter(s, i, i+1);
-	 	let len = Math.max(len, len2);
+	 	let len = Math.max(len1, len2);
 	 	if(len > end - start){
 	 		start = i - ((len -1) / 2);
 	 		end = i + (len / 2);
@@ -32,7 +32,7 @@ function LPS(s){
 
 }
 
-function expandFromCenter(str, left, right){
+function expandFromCenter(s, left, right){
 	if(s == null || left > right)return 0 
 
 		while(left >= 0 && right < s.length && s.charAt(left) == s.charAt(right)){
